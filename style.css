@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(206, 151, 206, 0.774);
+}
+
+main {
+  text-align: center;
+  background: #e7e7e7;
+  margin: 100px auto;
+  padding: 0.7rem;
+  border-radius: 5px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background: gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+section:nth-child(2) {
+  margin: 10px 0;
+}
