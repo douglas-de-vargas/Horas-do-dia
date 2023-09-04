@@ -32,3 +32,19 @@ section:nth-child(2) {
 #seconds {
   font-size: .9rem;
 }
+
+.dia {
+  background: orange;
+}
+
+.tarde {
+  background: yellow;
+}
+
+.noite {
+  background: blueviolet;
+}
+
+.madrugada {
+  background: blue;
+}
