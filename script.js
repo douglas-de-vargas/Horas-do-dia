@@ -5,6 +5,7 @@ const horaAtual = document.querySelector('#horario');
 const secondsHtml = document.querySelector('#seconds');
 const image = document.querySelector('#image');
 const diaDaSemana1 = document.querySelector('#dia-da-semana');
+const imageDay = document.querySelector('#image');
 
 function attDate() {
   const nD = new Date();
@@ -21,15 +22,19 @@ function attDate() {
   if (hours >= 6 && hours <= 11) {
     saudacao.innerHTML = `Bom Dia! <i class="bi bi-sun"></i>`;
     body.classList.add('dia');
+    imageDay.src ="/manha.jpg";
   } else if (hours >= 12 && hours <= 17) {
     saudacao.innerHTML = `Boa Tarde! <i class="bi bi-brightness-high"></i>`;
     body.classList.add('tarde');
+    imageDay.src ="/tarde.jpg";
   } else if (hours >= 18) {
     saudacao.innerHTML = `Boa Noite! <i class="bi bi-moon-stars"></i>`;
     body.classList.add('noite');
+    imageDay.src ="/noite.jpg";
   } else {
     saudacao.innerHTML = `Boa Madrugada! <i class="bi bi-moon-stars"></i>`
     body.classList.add('madrugada');
+    imageDay.src ="/noite.jpg";
   };
 
   diaDaSemana1.innerHTML = diasDaSemana[nD.getDay()];
