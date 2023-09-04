@@ -9,7 +9,7 @@ const diaDaSemana1 = document.querySelector('#dia-da-semana');
 function attDate() {
   const nD = new Date();
 
-  const diasDaSemana = ['Domingo', 'Segunda-Feira', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 
   const hours = nD.getHours() < 10 ? '0' + nD.getHours() : nD.getHours();
 
@@ -40,6 +40,7 @@ function attDate() {
 
   setTimeout(() => {
     main.classList.remove('load')
-  }, 0);
+  }, 500);
 }
+
 setInterval(attDate, 1000);
