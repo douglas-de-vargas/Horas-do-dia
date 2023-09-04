@@ -40,6 +40,6 @@ function attDate() {
 
   setTimeout(() => {
     main.classList.remove('load')
-  }, 500);
+  }, 0);
 }
 setInterval(attDate, 1000);
