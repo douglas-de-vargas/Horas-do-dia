@@ -4,8 +4,8 @@
   box-sizing: border-box;
   --corManha: #FDD835;
   --corTarde: #FFCC80;
-  --corNoite: #1565C0;
-  --corMadrugada: #3F51B5;
+  --corNoite: #503f49;
+  --corMadrugada: #503f49;
 }
 
 main {
@@ -71,7 +71,7 @@ section:nth-child(2) {
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
-  border: 2px dashed;
+  border: 2px solid;
 }
 
 #seconds {
@@ -92,4 +92,15 @@ section:nth-child(2) {
 
 .madrugada {
   background: var(--corMadrugada);
+}
+
+#saudacao-section {
+  position: relative;
+}
+
+#saudacao-section i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 2rem;
 }

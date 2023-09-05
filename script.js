@@ -1,6 +1,7 @@
 const body = document.querySelector('.body');
 const main = document.querySelector('.main');
 const saudacao = document.querySelector('#saudacao');
+const saudacaoIcon = document.querySelector('.bi');
 const diaDaSemana1 = document.querySelector('#dia-da-semana');
 const horaAtual = document.querySelector('#horario');
 const secondsHtml = document.querySelector('#seconds');
@@ -14,36 +15,45 @@ function attDate() {
   const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 
   let periodo = '';
-  iconId = '';
+  let iconId = '';
   let corVariavel = '';
   let imageSrc = '';
 
   if (horas >= 6 && horas <= 11) {
     periodo = 'manha';
-    iconId = 'sun';
+    iconId = 'bi-sun';
     corVariavel = '--corManha';
     imageSrc = '/mamha.jpg';
   } else if (horas >= 12 && horas <= 17) {
     periodo = 'tarde';
-    iconId = 'sun';
+    iconId = 'bi-sun';
     corVariavel = '--corTarde';
     imageSrc = '/tarde.jpg';
   } else if (horas >= 18) {
     periodo = 'noite';
-    iconId = 'moon-stars';
+    iconId = 'bi-moon-stars';
     corVariavel = '--corNoite';
     imageSrc = '/noite.jpg';
   } else {
     periodo = 'madrugada';
-    iconId = 'moon-stars';
+    iconId = 'bi-moon-stars';
     corVariavel = '--corMadrugada';
     imageSrc = '/noite.jpg';
   };
 
   body.classList.add(periodo);
+  
   imageDay.style.borderColor = 'var(' + corVariavel + ')';
+  
+  saudacaoIcon.style.textShadow = '1px 1px 1px var(' + corVariavel + ')';
 
-  saudacao.innerHTML = `Boa ${periodo.charAt(0).toUpperCase() + periodo.slice(1)}! <i class='bi bi-${iconId}'></i>`;
+  if (periodo === 'manha') {
+    saudacao.innerHTML = `Bom Dia!`;
+  } else {
+    saudacao.innerHTML = `Boa ${periodo.charAt(0).toUpperCase() + periodo.slice(1)}!`;
+  }
+
+  saudacaoIcon.classList.add(iconId);
 
   diaDaSemana1.innerHTML = diasDaSemana[nd.getDay()];
 
