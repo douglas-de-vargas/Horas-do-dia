@@ -9,7 +9,7 @@ const imageDay = document.querySelector('#image');
 
 function attDate() {
   const nd = new Date();
-  const horas = nd.getHours();
+  const horas = 8 // nd.getHours();
   const minutos = nd.getMinutes();
   const segundos = nd.getSeconds();
   const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
@@ -23,28 +23,31 @@ function attDate() {
     periodo = 'manha';
     iconId = 'bi-sun';
     corVariavel = '--corManha';
-    imageSrc = '/mamha.jpg';
-  } else if (horas >= 12 && horas <= 17) {
+    imageSrc = '/manha.jpg';
+  }
+  else if (horas >= 12 && horas <= 17) {
     periodo = 'tarde';
     iconId = 'bi-sun';
     corVariavel = '--corTarde';
     imageSrc = '/tarde.jpg';
-  } else if (horas >= 18) {
+  }
+  else if (horas >= 18 && horas <= 23) {
     periodo = 'noite';
     iconId = 'bi-moon-stars';
     corVariavel = '--corNoite';
     imageSrc = '/noite.jpg';
-  } else {
+  }
+  else if (horas >= 0 && horas <= 5) {
     periodo = 'madrugada';
     iconId = 'bi-moon-stars';
     corVariavel = '--corMadrugada';
     imageSrc = '/noite.jpg';
-  };
+  }
 
   body.classList.add(periodo);
-  
+
   imageDay.style.borderColor = 'var(' + corVariavel + ')';
-  
+
   saudacaoIcon.style.textShadow = '1px 1px 1px var(' + corVariavel + ')';
 
   if (periodo === 'manha') {
@@ -61,6 +64,9 @@ function attDate() {
   ${horas < 10 ? '0' : ''}${horas}:${minutos < 10 ? '0' : ''}${minutos}`;
 
   secondsHtml.innerHTML = `:${segundos < 10 ? '0' : ''}${segundos}`;
+  
+  imageDay.src = imageSrc;
+  imageDay.alt = `Imagem da ${periodo}.`;
 
   setTimeout(() => {
     main.classList.remove('load')
