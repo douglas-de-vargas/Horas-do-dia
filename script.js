@@ -9,7 +9,7 @@ const imageDay = document.querySelector('#image');
 
 function attDate() {
   const nd = new Date();
-  const horas = 8 // nd.getHours();
+  const horas = nd.getHours();
   const minutos = nd.getMinutes();
   const segundos = nd.getSeconds();
   const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
