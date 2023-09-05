@@ -2,11 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --corManha: #FDD835;
+  --corTarde: #FFCC80;
+  --corNoite: #1565C0;
+  --corMadrugada: #3F51B5;
 }
 
 main {
   text-align: center;
-  background: #e7e7e7;
+  background: #ECEFF1;
   margin: 100px auto;
   padding: 0.7rem;
   border-radius: 5px;
@@ -67,25 +71,25 @@ section:nth-child(2) {
   width: 100%;
   border-radius: 100%;
   object-fit: cover;
-  border: 1px dashed orange;
+  border: 2px dashed;
 }
 
 #seconds {
   font-size: .9rem;
 }
 
-.dia {
-  background: orange;
+.manha {
+  background: var(--corManha);
 }
 
 .tarde {
-  background: yellow;
+  background: var(--corTarde);
 }
 
 .noite {
-  background: blueviolet;
+  background: var(--corNoite);
 }
 
 .madrugada {
-  background: blue;
+  background: var(--corMadrugada);
 }
