@@ -35,7 +35,7 @@ function attDate() {
     periodo = 'noite';
     iconId = 'bi-moon-stars';
     corVariavel = '--corNoite';
-    imageSrc = '/noite.jpg';
+    imageSrc = './noite.jpg';
   }
   else if (horas >= 0 && horas <= 5) {
     periodo = 'madrugada';
