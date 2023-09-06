@@ -23,25 +23,25 @@ function attDate() {
     periodo = 'manha';
     iconId = 'bi-sun';
     corVariavel = '--corManha';
-    imageSrc = '/manha.jpg';
+    imageSrc = '/assets/manha.jpg';
   }
   else if (horas >= 12 && horas <= 17) {
     periodo = 'tarde';
     iconId = 'bi-sun';
     corVariavel = '--corTarde';
-    imageSrc = '/tarde.jpg';
+    imageSrc = '/assets/tarde.jpg';
   }
   else if (horas >= 18 && horas <= 23) {
     periodo = 'noite';
     iconId = 'bi-moon-stars';
     corVariavel = '--corNoite';
-    imageSrc = './noite.jpg';
+    imageSrc = '/assets/noite.jpg';
   }
   else if (horas >= 0 && horas <= 5) {
     periodo = 'madrugada';
     iconId = 'bi-moon-stars';
     corVariavel = '--corMadrugada';
-    imageSrc = '/noite.jpg';
+    imageSrc = '/assets/noite.jpg';
   }
 
   body.classList.add(periodo);
