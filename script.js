@@ -9,9 +9,9 @@ const imageDay = document.querySelector('#image');
 
 function attDate() {
   const nd = new Date();
-  const horas = nd.getHours();
-  const minutos = nd.getMinutes();
-  const segundos = nd.getSeconds();
+  const horas = nd.getHours().toString().padStart(2, '0');
+  const minutos = nd.getMinutes().toString().padStart(2, '0');
+  const segundos = nd.getSeconds().toString().padStart(2, '0');
   const diasDaSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 
   let periodo = '';
@@ -60,10 +60,9 @@ function attDate() {
 
   diaDaSemana1.innerHTML = diasDaSemana[nd.getDay()];
 
-  horaAtual.innerHTML = `
-  ${horas < 10 ? '0' : ''}${horas}:${minutos < 10 ? '0' : ''}${minutos}`;
+  horaAtual.innerHTML = `${horas}:${minutos}`
 
-  secondsHtml.innerHTML = `:${segundos < 10 ? '0' : ''}${segundos}`;
+  secondsHtml.innerHTML = `:${segundos}`;
   
   imageDay.src = imageSrc;
   imageDay.alt = `Imagem da ${periodo}.`;
