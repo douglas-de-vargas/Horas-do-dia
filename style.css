@@ -90,13 +90,14 @@ section:nth-child(2) {
 
 .load *::after {
   content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
   border-radius: 4px;
   background-size: 400% !important;
+  animation: loadings 1s infinite linear;
   background: linear-gradient(
     100deg,
     #eee 0%,
@@ -106,5 +107,4 @@ section:nth-child(2) {
     #eee 60%,
     #eee 100%
   );
-  animation: loadings 1s infinite linear;
 }
