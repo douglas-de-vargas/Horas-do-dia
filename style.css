@@ -38,12 +38,11 @@ main {
 
 section {
   padding: 10px;
-  border-radius: 4px;
 }
 
-section:nth-child(2) {
-  margin: 5px 0;
+#section-hora {
   background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
 
 #saudacao-section {
@@ -52,7 +51,7 @@ section:nth-child(2) {
 
 #saudacao-section i {
   position: absolute;
-  right: 0;
+  right: 2px;
   top: 0;
   font-size: 2rem;
 }
