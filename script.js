@@ -76,7 +76,7 @@ function attDate() {
 
   setTimeout(() => {
     main.classList.remove("load");
-  }, 500);
+  }, 2000);
 }
 
 setInterval(attDate, 1000);
