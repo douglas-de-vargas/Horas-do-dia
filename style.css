@@ -25,15 +25,13 @@
 }
 
 main {
-  text-align: center;
-  background: #ECEFF1;
-  margin: 100px auto;
-  padding: 0.7rem;
-  border-radius: 5px;
-  width: 300px;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+  background: #ECEFF1;
+  text-align: center;
+  margin: 100px auto;
+  padding: 0.7rem;
+  width: 300px;  border-radius: 5px;box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 section {
@@ -98,11 +96,11 @@ section:nth-child(2) {
   border-radius: 4px;
   background-size: 400% !important;
   background: linear-gradient(100deg,
-      #eee 0%,
-      #eee 10%,
-      lightgray 40%,
-      lightgray 50%,
-      #eee 60%,
-      #eee 100%);
+  #eee 0%,
+  #eee 10%,
+  lightgray 40%,
+  lightgray 50%,
+  #eee 60%,
+  #eee 100%);
   animation: loadings 1s infinite linear;
 }
