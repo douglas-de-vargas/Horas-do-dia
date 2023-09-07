@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --corManha: #fdd835;
+  --corManha: hsl(46, 96.7%, 64.5%);
   --corTarde: #feb115;
-  --corNoite: #503f49;
-  --corMadrugada: #503f49;
+  --corNoite: hsl(224, 64.3%, 32.9%);
+  --corMadrugada: hsl(0, 0%, 14.9%);
 }
 
 .manha {
