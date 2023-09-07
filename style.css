@@ -27,49 +27,54 @@
 main {
   display: flex;
   flex-direction: column;
+  max-width: max-content;
   background: #eceff1;
   text-align: center;
-  margin: 100px auto;
+  margin: 50px auto;
   padding: 0.7rem;
-  width: 300px;
   border-radius: 5px;
   box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-section {
+#section-saudacao {
+  position: relative;
   padding: 10px;
 }
 
-#section-hora {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
-}
-
-#saudacao-section {
-  position: relative;
-}
-
-#saudacao-section i {
+#section-saudacao i {
   position: absolute;
-  right: 2px;
-  top: 0;
   font-size: 2rem;
+  right: 1px;
+  top: 1px;
+}
+
+#section-data {
+  margin-top: .7rem;
+}
+
+#section-hora {
+  background: hsl(0, 0%, 83.1%);
+  border-radius: 5px;
+  margin-top: .7rem;
+  padding: 5px;
+  font-size: 2rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
 }
 
 #seconds {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
 }
 
 #section-image {
-  height: 300px;
-  border-radius: 100%;
+  margin-top: .7rem;
+  padding: 0;
 }
 
 #image {
-  width: 100%;
-  border-radius: 100%;
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid;
+  width: 100%;
 }
 
 /* Skeleton Load ################## */
@@ -106,4 +111,14 @@ section {
     #eee 60%,
     #eee 100%
   );
+}
+
+#git {
+  width: 100%;
+  text-align: center;
+}
+
+#git a {
+  color: hsl(240, 3.8%, 46.1%);
+  text-shadow: 1px 1px 1px #000;
 }
