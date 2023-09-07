@@ -112,3 +112,13 @@ main {
     #eee 100%
   );
 }
+
+#git {
+  width: 100%;
+  text-align: center;
+}
+
+#git a {
+  color: hsl(240, 3.8%, 46.1%);
+  text-shadow: 1px 1px 1px #000;
+}
