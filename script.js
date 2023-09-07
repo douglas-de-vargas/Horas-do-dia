@@ -2,7 +2,6 @@ const body = document.querySelector(".body");
 const main = document.querySelector(".main");
 const saudacao = document.querySelector("#saudacao");
 const saudacaoIcon = document.querySelector(".bi");
-const diaDaSemana1 = document.querySelector("#dia-da-semana");
 const diaMes = document.querySelector("#dia-mes");
 const horaAtual = document.querySelector("#horario");
 const secondsHtml = document.querySelector("#seconds");
@@ -82,9 +81,7 @@ function attDate() {
 
   saudacaoIcon.classList.add(iconId);
 
-  diaDaSemana1.innerHTML = diasDaSemana[nd.getDay()];
-
-  diaMes.innerHTML = `${diaAtual} de ${mesesDoAno[nd.getMonth()]}`;
+  diaMes.innerHTML = `${diasDaSemana[nd.getDay()]}, ${diaAtual} de ${mesesDoAno[nd.getMonth()]} de ${nd.getFullYear()}`;
 
   horaAtual.innerHTML = `${horas}:${minutos}`;
 
