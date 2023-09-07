@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --corManha: hsl(46, 96.7%, 64.5%);
-  --corTarde: #feb115;
-  --corNoite: hsl(224, 64.3%, 32.9%);
+  --corManha: #eceff1;
+  --corTarde: #eceff1;
+  --corNoite: hsl(0, 0%, 14.9%);
   --corMadrugada: hsl(0, 0%, 14.9%);
 }
 
@@ -28,7 +28,7 @@ main {
   display: flex;
   flex-direction: column;
   max-width: max-content;
-  background: #eceff1;
+  background: #fff;
   text-align: center;
   margin: 50px auto;
   padding: 0.7rem;
