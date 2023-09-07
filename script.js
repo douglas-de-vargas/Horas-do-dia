@@ -3,12 +3,14 @@ const main = document.querySelector(".main");
 const saudacao = document.querySelector("#saudacao");
 const saudacaoIcon = document.querySelector(".bi");
 const diaDaSemana1 = document.querySelector("#dia-da-semana");
+const diaMes = document.querySelector("#dia-mes");
 const horaAtual = document.querySelector("#horario");
 const secondsHtml = document.querySelector("#seconds");
 const imageDay = document.querySelector("#image");
 
 function attDate() {
   const nd = new Date();
+  const diaAtual = nd.getDate();
   const horas = nd.getHours().toString().padStart(2, "0");
   const minutos = nd.getMinutes().toString().padStart(2, "0");
   const segundos = nd.getSeconds().toString().padStart(2, "0");
@@ -20,6 +22,21 @@ function attDate() {
     "Quinta-feira",
     "Sexta-feira",
     "Sábado",
+  ];
+
+  const mesesDoAno = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
   ];
 
   let periodo = "";
@@ -66,6 +83,8 @@ function attDate() {
   saudacaoIcon.classList.add(iconId);
 
   diaDaSemana1.innerHTML = diasDaSemana[nd.getDay()];
+
+  diaMes.innerHTML = `${diaAtual} de ${mesesDoAno[nd.getMonth()]}`;
 
   horaAtual.innerHTML = `${horas}:${minutos}`;
 
