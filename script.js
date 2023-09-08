@@ -95,4 +95,4 @@ function attDate() {
   }, 2000);
 }
 
-setInterval(attDate, 1000);
+setInterval(attDate, 500);
