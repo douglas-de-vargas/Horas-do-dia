@@ -2,79 +2,182 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --corManha: #eceff1;
-  --corTarde: #eceff1;
-  --corNoite: hsl(0, 0%, 14.9%);
-  --corMadrugada: hsl(0, 0%, 14.9%);
+
+  --corManha: 41, 41, 6;
+  --corTarde: 248, 103, 0;
+  --corNoite: 18, 23, 25;
+  --corMadrugada: 38, 38, 38;
+
+  --corDay: 41, 41, 0;
+  --corNight: 255, 0, 0;
+
+  --degDia: linear-gradient(
+    7deg,
+    rgba(var(--corDay), 1),
+    rgba(48, 59, 42, 0.541)
+  );
+
+  --degNoite: linear-gradient(352deg, var(--corNight), black);
+}
+
+body {
+  background: rgba(233, 233, 233, 0.616);
+  font-family: 'Roboto', sans-serif;
 }
 
 .manha {
-  background: var(--corManha);
+  background-image: url(/assets/manha.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: rgba(var(--corManha), 1);
+  color: rgb(2, 2, 2);
 }
 
 .tarde {
-  background: var(--corTarde);
+  background-image: url(/assets/tarde.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: rgba(var(--corNoite), 1);
+  color: white;
 }
 
 .noite {
-  background: var(--corNoite);
+  background-image: url(/assets/noite.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: rgba(var(--corNoite), 1);
+  color: rgb(255, 255, 255);
 }
 
 .madrugada {
-  background: var(--corMadrugada);
+  background-image: url(/assets/noite.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: rgba(var(--corNoite), 1);
+  color: rgb(255, 255, 255);
 }
 
 main {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   max-width: max-content;
+  position: relative;
   background: #fff;
   text-align: center;
+  overflow: hidden;
+  padding-bottom: 10px;
   margin: 50px auto;
-  padding: 0.7rem;
-  border-radius: 5px;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.manha #section-saudacao {
+  color: gold;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.tarde #section-saudacao {
+  color: rgba(var(--corTarde), 1);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 #section-saudacao {
   position: relative;
-  padding: 10px;
+  text-transform: uppercase;
+  padding-top: 30px;
+  font-size: 1.5rem;
 }
 
 #section-saudacao i {
   position: absolute;
   font-size: 2rem;
-  right: 1px;
-  top: 1px;
+  right: 5px;
+  top: 5px;
 }
 
+.manha #section-data {
+  color: gold;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+.tarde #section-data {
+  color: rgba(var(--corTarde), 1);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
 #section-data {
-  margin-top: .7rem;
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 30px;
+  z-index: 3;
+  width: 100%;
 }
 
 #section-hora {
-  background: hsl(0, 0%, 83.1%);
-  border-radius: 5px;
-  margin-top: .7rem;
+  background: rgb(0 0 0 / 35%);
+  border-radius: 4px;
   padding: 5px;
   font-size: 2rem;
-  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  width: 100%;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: 'Orbitron', sans-serif;
 }
 
 #seconds {
   font-size: 1.5rem;
 }
 
+#section-image.noitedeg::before {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: -10%;
+  width: 120%;
+  height: 205px;
+  background: var(--degNoite);
+  transform: rotate(-10deg);
+  z-index: 1;
+}
+
+#section-image.diadeg::before {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: -10%;
+  width: 120%;
+  height: 210px;
+  background: var(--degDia);
+  z-index: 1;
+}
+
+#section-image img {
+  z-index: 2;
+}
 #section-image {
-  margin-top: .7rem;
+  position: relative;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#git {
+  position: absolute;
+  top: 50%;
+  right: 38.5%;
+  z-index: 5;
+}
+
+#git a {
+  color: black;
+  font-size: 2rem;
 }
 
 #image {
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid;
-  width: 100%;
+  box-shadow: 0 -5px 20px 10px rgba(var(--corNoite), 50%);
+  width: 90%;
 }
 
 /* Skeleton Load ################## */
@@ -93,7 +196,7 @@ main {
 }
 
 .load *::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -111,14 +214,4 @@ main {
     #eee 60%,
     #eee 100%
   );
-}
-
-#git {
-  width: 100%;
-  text-align: center;
-}
-
-#git a {
-  color: hsl(240, 3.8%, 46.1%);
-  text-shadow: 1px 1px 1px #000;
 }
