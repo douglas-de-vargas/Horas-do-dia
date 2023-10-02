@@ -70,6 +70,8 @@ function attDate() {
 
   if (periodo === 'manha') {
     saudacao.innerHTML = `Bom Dia!`
+  } else if (periodo === 'madrugada') {
+    saudacao.innerHTML = `Madrugada`
   } else {
     saudacao.innerHTML = `Boa ${
       periodo.charAt(0).toUpperCase() + periodo.slice(1)
