@@ -11,7 +11,7 @@ const sectionImage = document.querySelector('#section-image')
 function attDate() {
   const nd = new Date()
   const diaAtual = nd.getDate().toString().padStart(2, '0')
-  const horas = 9 // nd.getHours().toString().padStart(2, '0')
+  const horas = nd.getHours().toString().padStart(2, '0')
   const minutos = nd.getMinutes().toString().padStart(2, '0')
   const segundos = nd.getSeconds().toString().padStart(2, '0')
   const diasDaSemana = [
@@ -21,7 +21,7 @@ function attDate() {
     'Quar.',
     'Quin.',
     'Sex.',
-    'Sáb.',
+    'Sáb.'
   ]
 
   const mesesDoAno = [
@@ -36,43 +36,37 @@ function attDate() {
     'Set.',
     'Out.',
     'Nov.',
-    'Dez.',
+    'Dez.'
   ]
 
   let periodo = ''
-  let deg = ''
   let iconId = ''
   let corVariavel = ''
   let imageSrc = ''
 
   if (horas >= 6 && horas <= 11) {
     periodo = 'manha'
-    deg = 'diadeg'
     iconId = 'bi-sun'
     corVariavel = '--corManha'
     imageSrc = 'assets/manha.jpg'
   } else if (horas >= 12 && horas <= 17) {
     periodo = 'tarde'
-    deg = 'diadeg'
     iconId = 'bi-sun'
     corVariavel = '--corTarde'
     imageSrc = 'assets/tarde.jpg'
   } else if (horas >= 18 && horas <= 23) {
     periodo = 'noite'
-    deg = 'noitedeg'
     iconId = 'bi-moon-stars'
     corVariavel = '--corNoite'
     imageSrc = 'assets/noite.jpg'
   } else if (horas >= 0 && horas <= 5) {
     periodo = 'madrugada'
-    deg = 'noitedeg'
     iconId = 'bi-moon-stars'
     corVariavel = '--corMadrugada'
     imageSrc = 'assets/noite.jpg'
   }
 
   main.classList.add(periodo)
-  sectionImage.classList.add(deg)
 
   if (periodo === 'manha') {
     saudacao.innerHTML = `Bom Dia!`
